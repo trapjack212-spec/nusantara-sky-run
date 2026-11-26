@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nusantara Sky Run — an original flight game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0a1826;
+    height: 100%;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+  }
+  #wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px;
+  }
+  canvas {
+    width: min(1280px, 96vw);
+    aspect-ratio: 16 / 9;
+    background: #2f6fd0;
+    border-radius: 6px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55);
+  }
+  #help {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    text-align: center;
+  }
+  #help b { color: #ffb400; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="help"><b>W/S</b> throttle &nbsp;·&nbsp; <b>Arrows</b> pitch &amp; bank &nbsp;·&nbsp; <b>Mouse</b> steers &nbsp;·&nbsp; <b>P</b> pause &nbsp;·&nbsp; <b>M</b> mute &nbsp;·&nbsp; <b>R</b> restart</div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
